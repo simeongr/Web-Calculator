@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+       <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <script type="text/javascript" src="webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="webjars/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="webjars/bootstrap/css/bootstrap.min.css"/>
+        
+        <title>Calculator</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand navbar-light bg-light nav-in">
+            <a class="navbar-brand" href="/">
+                <img alt="SAP logo" th:src="@{/resources/sap-logo.png}"/>
+				SAP
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                Web Calculator
+            </div>
+        </nav>
+        <div class="AV">
+            <form th:action="@{/ans}" th:object="${expression}" method="post">
+                <div class="container">
+                    <div class="card border-black">
+                        <div class="card-body">
+                            <form>
+                                <h3 style="color:black">Calculator</h3>
+                                <div class="form-group">
+                                    <label for="expr">Expression</label>
+                                    <input type="text" class="form-control" id="expr" title="expr" th:field="*{expr}" placeholder="Enter expression"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Calculate</button>
+                                <a class="btn btn-secondary" type="button" th:href="@{/}">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
