@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <script type="text/javascript" src="webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="webjars/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="webjars/bootstrap/css/bootstrap.min.css"/>
+        
+        <title>Calculator</title>
+	</head>
+	<body>
+	<nav class="navbar navbar-expand navbar-light bg-light nav-in">
+		<a class="navbar-brand" href="/">
+			<img alt="SAP logo"	src="sap-logo.png" /> SAP
+		</a>
+		<div class="collapse navbar-collapse" id="navbarText">
+			Web Calculator
+		</div>
+	</nav>
+
+	<table style="margin-left:30%;float:top;">
+            <tr>
+                <th><u>Answer:</u></th>
+                <td th:text="${expression}"></td>
+            </tr>
+        </table>
+	</body>
+</html>
